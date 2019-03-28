@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Learn JS</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+<body>    
+    <main>
+        <form id='form' name='form'>
+            <input type="text" id="nome" name='name' placeholder="Digite seu nome aqui">
+                        
+            <input type="text" name='email' id="email" placeholder="Digite seu email aqui">
+                        
+            <input type="text" name='telefone' id="telefone" placeholder="Digite seu telefone aqui">
+
+            <input type="date" name='data' id="data" placeholder="dd/mm/yyyy">
+
+            <input type="text" name='quantidade' id="quantidade" placeholder="Quantidade">
+
+            <button id='submit'>Enviar</button>
+        </form>
+    </main>
+    <script type="text/javascript">
+        var btn = document.querySelector("#submit");
+        var form = document.querySelector('#form');
+        var nome = form.querySelector("#nome");
+        var data = form.querySelector("#data");
+        var email = form.querySelector("#email");
+        var quantidade = form.querySelector("#quantidade");
+
+
+        btn.addEventListener("click", function(e){
+            e.preventDefault();
+            var nomeVal = nome.value;
+            var dataVal = data.value;
+            var quantidadeVal = quantidade.value;
+            var emailVal = email.value;
+
+            console.log('Foram feitas ' + quantidadeVal + ' para ' + nomeVal + ' na data ' + dataVal + ' você recebeu um email no seu email ' + emailVal)
+        });
+    </script>
+</body>
+</html>
